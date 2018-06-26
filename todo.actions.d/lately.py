@@ -72,7 +72,7 @@ def main(directory, cutoff_days = 7):
 
     print c.red("\nClosed tasks since %s\n" % cutoff.strftime("%Y-%m-%d")) 
     
-    for line in lines:
+    for line in reversed(lines):
         m = re.match("x ([\d]{4}-[\d]{2}-[\d]{2}).*", line)
         if m is not None:
             done = m.group(1)
